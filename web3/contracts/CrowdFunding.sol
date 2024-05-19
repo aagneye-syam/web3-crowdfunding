@@ -12,8 +12,20 @@ contract CrowdFunding {
         uint256 amountCollected;
         string image;
         address[] donators;
-        uint256[] donators;
+        uint256[] donations;
     }
 
     mapping(uint256 => Campaign) public campaigns;
+
+    uint256 public numberofCampaigns = 0;
+
+    function createCampaign() {}
+
+    function donateToCampaign() {}
+
+    function getDonators() {}
+
+    function getCampaigns() {}
+
+    
 }
