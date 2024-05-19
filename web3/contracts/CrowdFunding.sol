@@ -19,7 +19,10 @@ contract CrowdFunding {
 
     uint256 public numberofCampaigns = 0;
 
-    function createCampaign() {}
+    function createCampaign(address _owner, string memory _title, string memory _description, uint _target,
+     uint _deadline, string memory _image ) public returns(uint256) {
+
+    }
 
     function donateToCampaign() {}
 
@@ -27,5 +30,5 @@ contract CrowdFunding {
 
     function getCampaigns() {}
 
-    
+
 }
