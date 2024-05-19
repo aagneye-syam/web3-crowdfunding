@@ -14,4 +14,6 @@ contract CrowdFunding {
         address[] donators;
         uint256[] donators;
     }
+
+    mapping(uint256 => Campaign) public campaigns;
 }
