@@ -33,6 +33,13 @@ module.exports = {
   },
   solidity: {
     version: "0.8.17",
+    defaultNetwork: "goerli",
+    networks: {
+      hardhat: {},
+      goerli: {
+        url: "https://rpc.ankr.com/eth_goerli",
+      },
+    },
     settings: {
       optimizer: {
         enabled: true,
