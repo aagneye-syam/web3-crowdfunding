@@ -6,4 +6,10 @@ import App from "./App";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 
-
+root.render(
+  <ThirdwebProvider desiredChainId={ChainId.Goerli}>
+    <Router>
+      <App />
+    </Router>
+  </ThirdwebProvider>
+);
