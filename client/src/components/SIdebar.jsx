@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SIdebar = () => {
+const Sidebar = () => {
   return (
     <div>
-      navbar
+      Sidebar
     </div>
   )
 }
 
-export default SIdebar
+export default Sidebar
