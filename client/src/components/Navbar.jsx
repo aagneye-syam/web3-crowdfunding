@@ -74,18 +74,24 @@ const Navbar = () => {
           } transition-all duration-700`}
         >
           <ul className="mb-4">
+
+            {/* mapping the whole menu copmonent */}
             {navlinks.map((link) => (
               <li
                 key={link.name}
                 className={`flex p-4 ${
                   isActive === link.name && "bg-[#3a3a43]"
                 }`}
+                
+                // action added
                 onClick={() => {
                   setIsActive(link.name);
                   setToggleDrawer(false);
                   navigate(link.link);
                 }}
               >
+
+                {/* icon and names added */}
                 <img
                   src={link.imgUrl}
                   alt={link.name}
