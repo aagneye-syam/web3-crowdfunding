@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CustomButton } from "./";
-import { dashboard, log, menu, search, thirdweb } from "../assets";
+import { dashboard, logo, menu, search, thirdweb } from "../assets";
 import { navlinks } from "../constants";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState("dashboard");
   const [toggleDrawer, setToggleDrawer] = useState("flase");
+
+  const address = '0xabc';
 
   return (
     <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
@@ -25,6 +27,20 @@ const Navbar = () => {
             className="w-[15px] h-[15px] object-contain"
           />
         </div>
+      </div>
+
+      <div className="sm:flex hidden flex-row justify-end gap-4">
+        <CustomButton
+          btnType="button"
+          title={address ? "Create a campaign" : "Connect"}
+          styles={address ? "bg-[#1dc071]" : "bg-[#8c6dfd]"}
+          handleClick={() => {
+            if (address) navigate("create-campaign");
+            else connect();
+          }}
+        />
+
+        
       </div>
     </div>
   );
