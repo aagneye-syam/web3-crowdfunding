@@ -1,12 +1,12 @@
-import React from 'react'
-import {Route,Routes} from 'react-router-dom';
-import {CampaignDetails,Home,CreateCampaign,Profile} from './pages'
-import Sidebar from './components/Sidebar';
-import Navbar from './components/navbar';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { CampaignDetails, Home, CreateCampaign, Profile } from "./pages";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/navbar";
 
 const App = () => {
   return (
-    <div className="relative sm:-8 p-4 bg-[#1e1c21] min-h-screen flex flex-row" >
+    <div className="relative sm:-8 p-4 bg-[#1e1c21] min-h-screen flex flex-row">
       <div className="sm:flex hidden mr-10 relative">
         <Sidebar />
       </div>
@@ -15,12 +15,14 @@ const App = () => {
         <Navbar />
 
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/create-campaign" element={<CreateCampaign />} />
+          <Route path="/campaign-details/:id" element={<CreateDetails />} />
         </Routes>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
