@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CustomButton } from "./";
-import { dashboard, logo, menu, search, thirdweb } from "../assets";
+import { dashboard, logo, menu, search, thirdweb,user } from "../assets";
 import { navlinks } from "../constants";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState("dashboard");
   const [toggleDrawer, setToggleDrawer] = useState("flase");
 
-  const address = '0xabc';
+  const address = "0xabc";
 
   return (
     <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
@@ -40,7 +40,15 @@ const Navbar = () => {
           }}
         />
 
-        
+        <Link to="/profile">
+          <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
+            <img
+              src={user}
+              alt="user"
+              className="w-[60%] h-[60%] object-contain"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );
