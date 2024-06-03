@@ -1,6 +1,7 @@
 import createCampaign from './create-campaign.svg';
 import dashboard from './dashboard.svg';
 import logo from './logo.svg';
+import logo01 from './logo.png';
 import logout from './logout.svg';
 import payment from './payment.svg';
 import profile from './profile.svg';
@@ -9,7 +10,7 @@ import withdraw from './withdraw.svg';
 import tagType from './type.svg';
 import search from './search.svg';
 import menu from './menu.svg';
-import money from './money.svg';
+//import money from './money.svg';
 import loader from './loader.svg';
 import thirdweb from './thirdweb.png';
 import user from './user.png'
@@ -19,6 +20,7 @@ export {
   createCampaign,
   dashboard,
   logo,
+  logo01,
   logout,
   payment,
   profile,
@@ -26,7 +28,7 @@ export {
   withdraw,
   search,
   menu,
-  money,
+ // money,
   loader,
   thirdweb,
   user,

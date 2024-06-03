@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 
-import money from "../assets";
+import money from "../assets/money.svg";
 import { CustomButton } from "../components";
 import { checkIfImage } from "../utils";
-import FormField from "../components";
+import FormField from "../components/FormField";
 
 const CreateCampaign = () => {
   const navigate = useNavigate();
