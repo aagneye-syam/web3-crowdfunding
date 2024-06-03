@@ -7,6 +7,14 @@ import { CustomButton } from "../components";
 import { checkIfImage } from "../utils";
 import FormField from "../components/FormField";
 
+const handleFormFieldChange = (fieldName, e) => {
+  setForm({ ...form, [fieldName]: e.target.value });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+};
+
 const CreateCampaign = () => {
   const navigate = useNavigate();
   const [Loading, isLoading] = useState(false);
