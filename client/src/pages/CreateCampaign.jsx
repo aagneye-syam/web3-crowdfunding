@@ -10,7 +10,7 @@ import FormField from "../components";
 const CreateCampaign = () => {
   const navigate = useNavigate();
   const [Loading, isLoading] = useState(false);
-  const [form, setform] = useState({
+  const [form, setForm] = useState({
     name: "",
     title: "",
     description: "",
