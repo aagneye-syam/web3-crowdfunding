@@ -43,12 +43,7 @@ export const StateContextProvider = ({ children }) => {
       value={{
         address,
         contract,
-        connect,
         createCampaign: publishCampaign,
-        getCampaigns,
-        getUserCampaigns,
-        donate,
-        getDonations,
       }}
     >
       {children}
