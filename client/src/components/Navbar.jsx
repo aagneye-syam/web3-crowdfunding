@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useStateContext } from "../context";
 import { CustomButton } from "./";
 import { dashboard, logo, menu, search, thirdweb, user } from "../assets";
 import { navlinks } from "../constants";
@@ -9,7 +10,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState("dashboard");
   const [toggleDrawer, setToggleDrawer] = useState("flase");
 
-  const address = "0xabc";
+  const {connect, address} = useStateContext();
 
   return (
     <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
