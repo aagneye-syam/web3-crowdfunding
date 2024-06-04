@@ -38,6 +38,20 @@ export const StateContextProvider = ({ children }) => {
     }
   };
 
-
-  
+  return (
+    <StateContext.Provider
+      value={{
+        address,
+        contract,
+        connect,
+        createCampaign: publishCampaign,
+        getCampaigns,
+        getUserCampaigns,
+        donate,
+        getDonations,
+      }}
+    >
+      {children}
+    </StateContext.Provider>
+  );
 };
