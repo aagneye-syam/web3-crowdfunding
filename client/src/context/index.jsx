@@ -55,3 +55,6 @@ export const StateContextProvider = ({ children }) => {
     </StateContext.Provider>
   );
 };
+
+
+export const useStateContext = () => useContext(StateContext);
