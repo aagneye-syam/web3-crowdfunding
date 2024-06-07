@@ -67,6 +67,13 @@ export const StateContextProvider = ({ children }) => {
     return filteredCampaigns;
   };
 
+  const donate = async (pId, amount) => {
+    const data = await contract.call('donateToCampaign', [pId], { value: ethers.utils.parseEther(amount)});
+
+    return data;
+  }
+
+
   return (
     <StateContext.Provider
       value={{
@@ -76,6 +83,8 @@ export const StateContextProvider = ({ children }) => {
         createCampaign: publishCampaign,
         getCampaigns,
         getUserCampaigns,
+        donate,
+        
       }}
     >
       {children}
