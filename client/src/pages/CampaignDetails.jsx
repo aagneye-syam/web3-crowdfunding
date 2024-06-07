@@ -30,6 +30,14 @@ const CampaignDetails = () => {
     if(contract) fetchDonators();
   }, [contract, address])
 
+  const handleDonate = async () => {
+    setIsLoading(true);
+
+    await donate(state.pId, amount); 
+
+    navigate('/')
+    setIsLoading(false);
+  }
 
   return (
     <div>
